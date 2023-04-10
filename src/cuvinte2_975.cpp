@@ -9,21 +9,19 @@ using namespace std;
 
 int main()
 {
-    char s[256], aux[11], pal[11];
+    char s[256], aux[11] = "", pal[11] = "zzzzzzzzzz";
     int j = 0;
     bool ok = false;
     cin.getline(s, 256);
-    char *cuvant = strtok(s, " ");
-    pal[0] = 'z';
+    char *cuvant = strtok(s, " .,");
     while (cuvant != NULL)
     {
-        if (cuvant[strlen(cuvant) - 1] == '.' || cuvant[strlen(cuvant) - 1] == ',')
-            cuvant[strlen(cuvant) - 1] = '\0';
         for (int i = strlen(cuvant) - 1; i >= 0; i--)
         {
             aux[j] = cuvant[i];
             j++;
         }
+        aux[j] = '\0';
         if (!strcmp(aux, cuvant) && strcmp(pal, cuvant) > 0)
         {
             strcpy(pal, cuvant);
@@ -31,7 +29,7 @@ int main()
         }
         j = 0;
         strcpy(aux, "");
-        cuvant = strtok(NULL, " ");
+        cuvant = strtok(NULL, " .,");
     }
     ok ? cout << pal : cout << "IMPOSIBIL";
 }
