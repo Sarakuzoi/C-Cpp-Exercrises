@@ -1,3 +1,8 @@
+// https://www.pbinfo.ro/probleme/251/interclasare2
+
+// Se dau două şiruri a şi b, cu n, respectiv m elemente, numere naturale, ordonate strict crescător.
+// Să se afişeze, în ordine strict crescătoare, valorile existente în ambele şiruri.
+
 #include <iostream>
 #include <fstream>
 
