@@ -27,6 +27,8 @@ int main()
         {
             vi++;
             v[vi] = a[ai];
+            ai++;
+            bi++;
         }
         if (a[ai] < b[bi])
             ai++;
