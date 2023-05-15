@@ -15,9 +15,27 @@ using namespace std;
 ifstream in("parimpar1.in");
 ofstream out("parimpar1.out");
 
+int v1[6], v2[6];
+
 int main()
 {
-    int n;
+    int n, x, s = 0;
     in >> n;
-    // TODO
+    for (int i = 1; i <= n; i++)
+    {
+        in >> x;
+        v1[x]++;
+    }
+    for (int i = 1; i <= n; i++)
+    {
+        in >> x;
+        v2[x]++;
+    }
+    for (int i = 0; i <= 5; i++)
+        for (int j = 0; j <= 5; j++)
+            if (i % 2 != j % 2)
+                for (int x = 1; x <= v1[i] * v2[j]; x++)
+                    s += i * j;
+    out << s;
+    return 0;
 }
