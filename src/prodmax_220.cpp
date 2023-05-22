@@ -16,6 +16,7 @@ int has_two[101], has_zero[101];
 int main()
 {
     int m, n, maxi = 0, a[101][101];
+
     in >> m >> n;
     for (int i = 1; i <= m; i++)
         for (int j = 1; j <= n; j++)
