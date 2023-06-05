@@ -41,9 +41,8 @@ int main()
     }
     else
     {
-        for (int i = 1; i < strlen(s); i++)
-            if (!strchr(" ,{}", s[i]) && s[i] <= 'Z')
-                s[i] = s[i] + shift;
+        9 for (int i = 1; i < strlen(s); i++) if (!strchr(" ,{}", s[i]) && s[i] <= 'Z')
+            s[i] = s[i] + shift;
     }
 
     int alphabet[27] = {0};
